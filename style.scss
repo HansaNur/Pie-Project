@@ -1,0 +1,399 @@
+@import "variable";
+@import "modules";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $normal-font;
+  // overflow-x: hidden;
+
+  &:hover {
+    transition: ease 0.3s;
+  }
+}
+
+body {
+  background-color: #fee8b079;
+}
+
+// NAVBAR
+
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 50px;
+  align-items: center;
+
+  @include back;
+
+  &-title {
+    @include logo;
+  }
+
+  &-menu {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 90px;
+
+    a {
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 16px;
+
+      &:hover {
+        @include hover;
+      }
+
+      &:nth-child(1) {
+        font-weight: 700;
+        color: $theme-color;
+      }
+
+      &:nth-child(2) {
+        font-weight: 700;
+        color: $text-color;
+      }
+    }
+  }
+
+  &-tel {
+    color: $text-color;
+    font-weight: 600;
+
+    i {
+      @include icon;
+      color: $theme-color;
+    }
+  }
+}
+
+// BANNER
+
+.banner {
+  width: 100%;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 10px solid $theme2-color;
+
+  @include back;
+
+  &-left {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    text-align: center;
+
+    h2 {
+      color: $theme3-color;
+      font-size: 30px;
+      text-align: center;
+    }
+
+    button {
+      @extend %button;
+      background-color: $theme3-color;
+    }
+
+    p {
+      font-size: 18px;
+      font-weight: 500;
+      color: $theme3-color;
+    }
+  }
+
+  &-middle {
+    width: 33%;
+    position: relative;
+
+    span {
+      position: absolute;
+      top: 10%;
+      right: 5%;
+      @include price;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 10px solid $theme2-color;
+
+      &:hover {
+        @include hover;
+      }
+    }
+  }
+
+  &-right {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+
+    h2 {
+      color: $text-color;
+      font-size: 30px;
+      text-align: center;
+      text-shadow: 1px 1px 4px $theme3-color;
+    }
+
+    p {
+      font-weight: 700;
+      color: $theme3-color;
+      text-shadow: 1px 1px 2px $pie3-color;
+      font-size: 18px;
+    }
+  }
+}
+
+// PRODUCTS
+
+.product {
+  padding: 20px 50px;
+
+  &-title {
+    text-align: center;
+
+    span {
+      color: $theme2-color;
+      font-weight: 500;
+      font-family: $title-font;
+    }
+
+    h2 {
+      color: $theme-color;
+      font-family: $title-font;
+      font-weight: 500;
+      font-size: 30px;
+    }
+  }
+
+  &s {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    gap: 30px;
+
+    &-card {
+      width: 280px;
+      text-align: center;
+      border: 2px solid $theme2-color;
+      border-radius: 40px 40px 0 0;
+      padding: 10px;
+      background-color: $theme2-color;
+      box-shadow: 1px 1px 5px $theme3-color;
+      margin-bottom: 5px;
+
+      img {
+        width: 100%;
+        border-radius: 40px 40px 0;
+
+        &:hover {
+          @include hover;
+          transform: scale(95%);
+        }
+      }
+
+      p {
+        margin: 10px 0;
+        font-weight: 400;
+      }
+
+      &-content {
+        display: flex;
+        justify-content: space-evenly;
+        padding-top: 10px;
+
+        span {
+          @include price;
+        }
+
+        h3 {
+          font-family: $title-font;
+          font-weight: 400;
+          font-size: 20px;
+        }
+      }
+
+      &-order {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+
+        i {
+          @include icon;
+          background-color: $pie3-color;
+          color: $button-color;
+        }
+
+        button {
+          @extend %button;
+        }
+      }
+    }
+  }
+}
+
+// ORDER
+.order {
+  width: 100%;
+  margin-top: 30px;
+  padding: 20px 50px;
+  display: flex;
+  border-top: 10px solid $theme2-color;
+  border-bottom: 10px solid $theme2-color;
+
+  &-card {
+    width: 500px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 2px 2px 9px $black-color;
+    overflow-x: hidden;
+    transform: rotate(5deg);
+
+    &-left {
+      background-color: $theme2-color;
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      width: 55%;
+      align-items: center;
+      gap: 10px;
+      padding: 0 10px 10px 10px;
+
+      h3 {
+        font-size: 20px;
+        font-family: $title-font;
+        font-weight: 300;
+        color: $black-color;
+      }
+
+      button {
+        @extend %button;
+        background-color: rgb(211, 3, 55);
+      }
+    }
+
+    &-right {
+      width: 45%;
+      background-color: $theme2-color;
+      padding-top: 4px;
+
+      img {
+        width: 170px;
+      }
+    }
+  }
+}
+
+// SOCİAL
+.social {
+  width: 100%;
+  padding: 20px 50px;
+
+  &-title {
+    text-align: center;
+    font-size: 30px;
+    color: $button-color;
+  }
+
+  &-card {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    text-align: center;
+
+    &s {
+      flex: 1 1 150px;
+      &:hover {
+        @include hover;
+        transform: scale(1.2);
+      }
+    }
+  }
+}
+
+// FOOTER
+.footer {
+  width: 100%;
+  padding: 20px 50px;
+  display: flex;
+  border-top: 10px solid $theme2-color;
+  margin-top: 20px;
+  li {
+    list-style-type: none;
+  }
+  &-title {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    @include logo;
+   p{
+    font-size: 24px;
+    width: 100%;
+   }
+    ul {
+      padding: 0 15px 0 15px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      color: $theme3-color;
+        i {
+          font-size: 20px;
+          
+        }
+      
+    }
+  }
+  &-menu {
+    width: 75%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 50px;
+  
+    ul {
+      // width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      li {
+        line-height: 25px;
+        &:hover{
+          @include hover;
+        }
+        &:nth-child(1) {
+          font-size: 18px;
+          font-weight: 600;
+          color: $black-color;
+          &:hover {
+            color: $theme3-color;
+            cursor: pointer;
+            transition: all 0.3s;
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+  }
+}

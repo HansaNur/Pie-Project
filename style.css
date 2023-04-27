@@ -1,0 +1,419 @@
+@import url("https://fonts.googleapis.com/css2?family=DynaPuff:wght@400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&family=Sigmar&display=swap");
+.order-card-left button, .products-card-order button, .banner-left button {
+  background-color: rgb(211, 3, 55);
+  color: aliceblue;
+  padding: 5px 8px;
+  border: none;
+  border-radius: 20px;
+}
+.order-card-left button:hover, .products-card-order button:hover, .banner-left button:hover {
+  transform: scale(1.1);
+  background-color: #E21818;
+  opacity: 95%;
+  box-shadow: 1px 1px 7px #F79540;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway";
+}
+*:hover {
+  transition: ease 0.3s;
+}
+
+body {
+  background-color: rgba(254, 232, 176, 0.4745098039);
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 50px;
+  align-items: center;
+  position: relative;
+}
+.navbar .background {
+  background-color: #F79540;
+  width: 50%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -10;
+}
+.navbar-title {
+  font-size: 32px;
+}
+.navbar-title p span:nth-child(1) {
+  color: #FC4F00;
+  font-family: "DynaPuff";
+}
+.navbar-title p span:nth-child(2) {
+  color: #F79540;
+  font-family: "DynaPuff";
+}
+.navbar-title:hover {
+  transform: scale(1.1);
+}
+.navbar-menu {
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 90px;
+}
+.navbar-menu a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+.navbar-menu a:hover {
+  transform: scale(1.1);
+  transition: ease 0.3s;
+  cursor: pointer;
+}
+.navbar-menu a:nth-child(1) {
+  font-weight: 700;
+  color: #FC4F00;
+}
+.navbar-menu a:nth-child(2) {
+  font-weight: 700;
+  color: aliceblue;
+}
+.navbar-tel {
+  color: aliceblue;
+  font-weight: 600;
+}
+.navbar-tel i {
+  background-color: aliceblue;
+  color: #161616;
+  padding: 4px;
+  border-radius: 15px 15px 0 15px;
+  color: #FC4F00;
+}
+.navbar-tel i:hover {
+  transform: scale(1.1);
+  transition: ease 0.3s;
+  cursor: pointer;
+}
+
+.banner {
+  width: 100%;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 10px solid #F79540;
+  position: relative;
+}
+.banner .background {
+  background-color: #F79540;
+  width: 50%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -10;
+}
+.banner-left {
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  text-align: center;
+}
+.banner-left h2 {
+  color: rgb(211, 3, 55);
+  font-size: 30px;
+  text-align: center;
+}
+.banner-left button {
+  background-color: rgb(211, 3, 55);
+}
+.banner-left p {
+  font-size: 18px;
+  font-weight: 500;
+  color: rgb(211, 3, 55);
+}
+.banner-middle {
+  width: 33%;
+  position: relative;
+}
+.banner-middle span {
+  position: absolute;
+  top: 10%;
+  right: 5%;
+  background-color: #FC4F00;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+.banner-middle img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  border: 10px solid #F79540;
+}
+.banner-middle img:hover {
+  transform: scale(1.1);
+  transition: ease 0.3s;
+  cursor: pointer;
+}
+.banner-right {
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+}
+.banner-right h2 {
+  color: aliceblue;
+  font-size: 30px;
+  text-align: center;
+  text-shadow: 1px 1px 4px rgb(211, 3, 55);
+}
+.banner-right p {
+  font-weight: 700;
+  color: rgb(211, 3, 55);
+  text-shadow: 1px 1px 2px #FEE8B0;
+  font-size: 18px;
+}
+
+.product {
+  padding: 20px 50px;
+}
+.product-title {
+  text-align: center;
+}
+.product-title span {
+  color: #F79540;
+  font-weight: 500;
+  font-family: "DynaPuff";
+}
+.product-title h2 {
+  color: #FC4F00;
+  font-family: "DynaPuff";
+  font-weight: 500;
+  font-size: 30px;
+}
+.products {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  gap: 30px;
+}
+.products-card {
+  width: 280px;
+  text-align: center;
+  border: 2px solid #F79540;
+  border-radius: 40px 40px 0 0;
+  padding: 10px;
+  background-color: #F79540;
+  box-shadow: 1px 1px 5px rgb(211, 3, 55);
+  margin-bottom: 5px;
+}
+.products-card img {
+  width: 100%;
+  border-radius: 40px 40px 0;
+}
+.products-card img:hover {
+  transform: scale(1.1);
+  transition: ease 0.3s;
+  cursor: pointer;
+  transform: scale(95%);
+}
+.products-card p {
+  margin: 10px 0;
+  font-weight: 400;
+}
+.products-card-content {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 10px;
+}
+.products-card-content span {
+  background-color: #FC4F00;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+.products-card-content h3 {
+  font-family: "DynaPuff";
+  font-weight: 400;
+  font-size: 20px;
+}
+.products-card-order {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.products-card-order i {
+  background-color: aliceblue;
+  color: #161616;
+  padding: 4px;
+  border-radius: 15px 15px 0 15px;
+  background-color: #FEE8B0;
+  color: #E21818;
+}
+.products-card-order i:hover {
+  transform: scale(1.1);
+  transition: ease 0.3s;
+  cursor: pointer;
+}
+.order {
+  width: 100%;
+  margin-top: 30px;
+  padding: 20px 50px;
+  display: flex;
+  border-top: 10px solid #F79540;
+  border-bottom: 10px solid #F79540;
+}
+.order-card {
+  width: 500px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  box-shadow: 2px 2px 9px #161616;
+  overflow-x: hidden;
+  transform: rotate(5deg);
+}
+.order-card-left {
+  background-color: #F79540;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  width: 55%;
+  align-items: center;
+  gap: 10px;
+  padding: 0 10px 10px 10px;
+}
+.order-card-left h3 {
+  font-size: 20px;
+  font-family: "DynaPuff";
+  font-weight: 300;
+  color: #161616;
+}
+.order-card-left button {
+  background-color: rgb(211, 3, 55);
+}
+.order-card-right {
+  width: 45%;
+  background-color: #F79540;
+  padding-top: 4px;
+}
+.order-card-right img {
+  width: 170px;
+}
+
+.social {
+  width: 100%;
+  padding: 20px 50px;
+}
+.social-title {
+  text-align: center;
+  font-size: 30px;
+  color: #E21818;
+}
+.social-card {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.social-cards {
+  flex: 1 1 150px;
+}
+.social-cards:hover {
+  transform: scale(1.1);
+  transition: ease 0.3s;
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.footer {
+  width: 100%;
+  padding: 20px 50px;
+  display: flex;
+  border-top: 10px solid #F79540;
+  margin-top: 20px;
+}
+.footer li {
+  list-style-type: none;
+}
+.footer-title {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  font-size: 32px;
+}
+.footer-title p span:nth-child(1) {
+  color: #FC4F00;
+  font-family: "DynaPuff";
+}
+.footer-title p span:nth-child(2) {
+  color: #F79540;
+  font-family: "DynaPuff";
+}
+.footer-title:hover {
+  transform: scale(1.1);
+}
+.footer-title p {
+  font-size: 24px;
+  width: 100%;
+}
+.footer-title ul {
+  padding: 0 15px 0 15px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  color: rgb(211, 3, 55);
+}
+.footer-title ul i {
+  font-size: 20px;
+}
+.footer-menu {
+  width: 75%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 50px;
+}
+.footer-menu ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer-menu ul li {
+  line-height: 25px;
+}
+.footer-menu ul li:hover {
+  transform: scale(1.1);
+  transition: ease 0.3s;
+  cursor: pointer;
+}
+.footer-menu ul li:nth-child(1) {
+  font-size: 18px;
+  font-weight: 600;
+  color: #161616;
+}
+.footer-menu ul li:nth-child(1):hover {
+  color: rgb(211, 3, 55);
+  cursor: pointer;
+  transition: all 0.3s;
+  transform: scale(1.1);
+}/*# sourceMappingURL=style.css.map */

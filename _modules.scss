@@ -1,0 +1,71 @@
+@mixin logo {
+  font-size: 32px;
+  p {
+    span:nth-child(1) {
+      color: $theme-color;
+      font-family: $title-font;
+    }
+
+    span:nth-child(2) {
+      color: $theme2-color;
+      font-family: $title-font;
+    }
+  }
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+@mixin price {
+  background-color: $theme-color;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+
+%button {
+  background-color: $theme3-color;
+  color: $text-color;
+  padding: 5px 8px;
+  border: none;
+  border-radius: 20px;
+
+  &:hover {
+    transform: scale(1.1);
+    background-color: $button-color;
+    opacity: 95%;
+    box-shadow: 1px 1px 7px $theme2-color;
+  }
+}
+
+@mixin back {
+  position: relative;
+
+  .background {
+    background-color: $theme2-color;
+    width: 50%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -10;
+  }
+}
+
+@mixin icon {
+  background-color: $text-color;
+  color: $black-color;
+  padding: 4px;
+  border-radius: 15px 15px 0 15px;
+  &:hover {
+    transform: scale(1.1);
+    transition: ease 0.3s;
+    cursor: pointer;
+  }
+}
+
+@mixin hover {
+  transform: scale(1.1);
+  transition: ease 0.3s;
+  cursor: pointer;
+}
